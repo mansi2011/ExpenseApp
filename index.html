@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="headingTotal">0</h1>
+    <input id="inputAmount" type="text"></input>
+    <button id="btnAddExpense">+</button>
+    
+
+
+    <script>
+        //get the heading element
+        const headingElement = document.querySelector("#headingTotal");
+        //initialize value of expense at 0
+        let totalExpense = 0;
+
+        // //set the heading element to totalExpense
+        // headingElement.textContent=totalExpense;
+
+
+
+        //on buttonclick add input value to totalexpense
+        function addExpenseToTotal(){
+            //read value from inputAmount
+            const inputElement = document.querySelector("#inputAmount");
+            const textAmount = inputElement.value;
+            // console.log({textAmount});
+
+            //convert it to number
+            const expense = parseInt(textAmount,10);
+            // console.log({expense});
+            //add that value to totalexpense
+            totalExpense = totalExpense + expense;
+            // console.log(totalExpense);
+
+            //set the heading element to totalExpense
+            headingElement.textContent=totalExpense;
+
+        }
+        
+
+
+
+
+
+
+        // get the button elememt
+        const element= document.querySelector("#btnAddExpense")    //document is the view or DOM
+        // console.log(element)
+        
+        
+        // //take a number which starts from zero
+        // let counter=0;
+        
+        // //function to increment number
+        // function counterIncrement(){
+        //     //every click increment a number
+        //     counter=counter+1;
+        //     // console.log(counter)
+
+        // }
+
+        
+        //listen to click event
+        element.addEventListener("click",addExpenseToTotal,false)
+        //argument1 type argument2 function/listener argument3 options
+
+       
+
+    </script>
+    
+</body>
+</html>
