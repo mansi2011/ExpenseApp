@@ -1,2 +1,2 @@
 # totalExpenseApp
-visit the app on click https://app.netlify.com/sites/totalexpenseapp/deploys
+visit the app on click https://totalexpenseapp.netlify.app/
